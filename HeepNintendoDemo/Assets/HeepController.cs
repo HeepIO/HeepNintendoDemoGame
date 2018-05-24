@@ -11,6 +11,7 @@ public class HeepController : MonoBehaviour {
     public GameObject LeftLight;
     public GameObject FireBall;
     public GameObject CoffeeTable;
+    public List<GameObject> CubeCorn;
 
     private void OnApplicationQuit()
     {
@@ -34,6 +35,7 @@ public class HeepController : MonoBehaviour {
         myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Right Light", false));
         myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Fire Ball", false));
         myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Flip Table", false));
+        myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Pop Corn", false));
 
         myDevice.SetDeviceNameStartup("Room Game");
         myDevice.StartListening();
@@ -81,6 +83,17 @@ public class HeepController : MonoBehaviour {
         {
             myDevice.SetControlByID(3, 0, false);
             CoffeeTable.GetComponent<Rigidbody>().AddForce(new Vector3(100, 1000, 0));
+        }
+
+        if (myDevice.GetControlValueByID(4) == 1)
+        {
+            myDevice.SetControlByID(4, 0, false);
+
+            for(int i = 0; i < CubeCorn.Count; i++)
+            {
+                CubeCorn[i].GetComponent<Rigidbody>().AddForce(new Vector3(0, 3000, 0));
+                CubeCorn[i].GetComponent<Rigidbody>().AddTorque(new Vector3(3000, 1000, 0));
+            }
         }
     }
 }
