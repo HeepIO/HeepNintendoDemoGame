@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43562571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.33, y: 19.3, z: -5.08}
+  m_LocalPosition: {x: 15.934, y: 19.824, z: -4.944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 445823433}
@@ -178,6 +178,22 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &83404430 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 159138, guid: 9a8e2ad0cc8923746b7b5ef3f7c34059, type: 2}
+  m_PrefabInternal: {fileID: 1906626482}
+--- !u!65 &83404434
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83404430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.026377534, y: 0.012804352, z: 0.012283396}
+  m_Center: {x: 0.016730072, y: -0.00091144344, z: 0.010480318}
 --- !u!1 &130324604
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +308,7 @@ MonoBehaviour:
   RightLight: {fileID: 1142065744}
   LeftLight: {fileID: 43562571}
   FireBall: {fileID: 1005636894}
+  CoffeeTable: {fileID: 1506033536}
 --- !u!4 &158676694
 Transform:
   m_ObjectHideFlags: 0
@@ -455,6 +472,22 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 418214, guid: 2794e48d8bf5c7349b42f50bb23e5e4b, type: 2}
   m_PrefabInternal: {fileID: 1719213323}
+--- !u!1 &428038443 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 148624, guid: 9a8e2ad0cc8923746b7b5ef3f7c34059, type: 2}
+  m_PrefabInternal: {fileID: 1906626482}
+--- !u!65 &428038447
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 428038443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.055791207, y: 0.010940869, z: 0.040463757}
+  m_Center: {x: 0.014746291, y: 0.000020298925, z: 0.024570499}
 --- !u!1 &445823432
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +910,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &835989148 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 118902, guid: cae965229ed2dc64396613399ba974d4, type: 2}
+  m_PrefabInternal: {fileID: 1702112862}
+--- !u!65 &835989151
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835989148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.027297735, y: 0.022496933, z: 0.053482123}
+  m_Center: {x: -0.00000023892798, y: -0.0012485347, z: 0.026753068}
 --- !u!1001 &845155866
 Prefab:
   m_ObjectHideFlags: 0
