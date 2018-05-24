@@ -44,6 +44,10 @@ public class HeepController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (Input.GetKey("escape"))
+            Application.Quit();
+
 		if(myDevice.GetControlValueByID(0) == 0)
         {
             LeftLight.GetComponent<Light>().enabled = false;
