@@ -300,6 +300,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Campfire Pack\Script\SwitchView.cs" />
     <Compile Include="Assets\Heep\DeviceSearch.cs" />
     <Compile Include="Assets\Heep\HeepAsyncComms.cs" />
     <Compile Include="Assets\Heep\HeepCommunications.cs" />
