@@ -311,6 +311,7 @@
     <Compile Include="Assets\Heep\HeepParser.cs" />
     <Compile Include="Assets\Heep\NonVolatileData.cs" />
     <Compile Include="Assets\HeepController.cs" />
+    <Compile Include="Assets\IslandHeep.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
