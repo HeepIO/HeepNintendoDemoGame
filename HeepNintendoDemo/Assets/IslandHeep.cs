@@ -20,6 +20,11 @@ public class IslandHeep : MonoBehaviour {
 
     public GameObject MainCharacter;
 
+	public List<GameObject> Boulders;
+
+	public GameObject VolcanoFire;
+	public GameObject VolcanoOutExplosion;
+
     private void OnApplicationQuit()
     {
         Debug.Log("Quitting!");
@@ -77,12 +82,25 @@ public class IslandHeep : MonoBehaviour {
         myDevice.SetControlByID(2, 1, false);
     }
 
+	private bool WaterFallHandled = false;
     private void HandleWaterFall()
     {
         if(myDevice.GetControlValueByID(1) == 1)
         {
-            waterFallRock.SetActive(false);
+            //waterFallRock.SetActive(false);
             waterFallRockExplosion.SetActive(true);
+			VolcanoOutExplosion.SetActive (true);
+			VolcanoFire.SetActive (false);
+			if (!WaterFallHandled) {
+				
+				for (int i = 0; i < Boulders.Count; i++) {
+					Boulders [i].AddComponent<Rigidbody> ();
+					Boulders [i].GetComponent<Rigidbody> ().mass = 10;
+				}
+
+				WaterFallHandled = true;
+			}
+
         }
     }
 
