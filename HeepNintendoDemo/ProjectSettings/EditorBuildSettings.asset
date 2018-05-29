@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/NintendoDemoScenes/FloatingOverTerrain.unity
     guid: ae2aa71de34189247a796f05c7125fd4
+  - enabled: 1
+    path: Assets/NintendoDemoScenes/IslandGame.unity
+    guid: ba0484b67b17a9d4ab34c839b72c34cf
