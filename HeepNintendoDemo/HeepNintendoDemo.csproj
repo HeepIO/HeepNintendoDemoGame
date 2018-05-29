@@ -312,6 +312,7 @@
     <Compile Include="Assets\Heep\NonVolatileData.cs" />
     <Compile Include="Assets\HeepController.cs" />
     <Compile Include="Assets\IslandHeep.cs" />
+    <Compile Include="Assets\TriggerChest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

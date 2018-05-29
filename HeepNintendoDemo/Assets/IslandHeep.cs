@@ -12,6 +12,8 @@ public class IslandHeep : MonoBehaviour {
     public GameObject noonLight;
     public GameObject nightLight;
 
+    public GameObject waterFallRock;
+
     private void OnApplicationQuit()
     {
         Debug.Log("Quitting!");
@@ -45,6 +47,20 @@ public class IslandHeep : MonoBehaviour {
             Application.Quit();
 
         HandleTimeOfDay();
+        HandleWaterFall();
+    }
+
+    public void ChestTriggered()
+    {
+        myDevice.SetControlByID(2, 1, false);
+    }
+
+    private void HandleWaterFall()
+    {
+        if(myDevice.GetControlValueByID(1) == 1)
+        {
+            waterFallRock.SetActive(false);
+        }
     }
 
     private void HandleTimeOfDay()
