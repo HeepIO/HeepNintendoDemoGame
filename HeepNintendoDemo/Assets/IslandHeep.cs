@@ -15,6 +15,8 @@ public class IslandHeep : MonoBehaviour {
     public GameObject waterFallRock;
     public GameObject waterFallRockExplosion;
 
+    public GameObject SunTurnOnSound;
+
     private void OnApplicationQuit()
     {
         Debug.Log("Quitting!");
@@ -72,6 +74,7 @@ public class IslandHeep : MonoBehaviour {
             ControllerCamera.GetComponent<Skybox>().material = noonSkybox;
             noonLight.SetActive(true);
             nightLight.SetActive(false);
+            SunTurnOnSound.SetActive(true);
         }
     }
 }
