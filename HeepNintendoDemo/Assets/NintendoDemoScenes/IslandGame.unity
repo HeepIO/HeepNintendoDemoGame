@@ -10687,6 +10687,10 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300040, guid: 96f4c16fb9e17f449a4668078f8ceaf9, type: 3}
+--- !u!1 &908551806 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  m_PrefabInternal: {fileID: 1581122524}
 --- !u!1 &911148780
 GameObject:
   m_ObjectHideFlags: 0
@@ -15181,6 +15185,7 @@ MonoBehaviour:
   waterFallRock: {fileID: 1050716919}
   waterFallRockExplosion: {fileID: 1953888629}
   SunTurnOnSound: {fileID: 1432022336}
+  MainCharacter: {fileID: 908551806}
 --- !u!4 &1263299346
 Transform:
   m_ObjectHideFlags: 0

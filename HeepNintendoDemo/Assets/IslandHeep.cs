@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Heep;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class IslandHeep : MonoBehaviour {
 
@@ -16,6 +17,8 @@ public class IslandHeep : MonoBehaviour {
     public GameObject waterFallRockExplosion;
 
     public GameObject SunTurnOnSound;
+
+    public GameObject MainCharacter;
 
     private void OnApplicationQuit()
     {
@@ -39,6 +42,11 @@ public class IslandHeep : MonoBehaviour {
         myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Set Noon", false));
         myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Waterfall", false));
         myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.output, Control.CtrlType.OnOff, "Treasure", false));
+        myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Forward", false));
+        myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Backward", false));
+        myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Left", false));
+        myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Right", false));
+        myDevice.AddControl(Control.CreateControl(Control.CtrlInputOutput.input, Control.CtrlType.OnOff, "Jump", false));
 
         myDevice.SetDeviceNameStartup("Island Game");
         myDevice.StartListening();
@@ -51,6 +59,17 @@ public class IslandHeep : MonoBehaviour {
 
         HandleTimeOfDay();
         HandleWaterFall();
+        HandleMovementInput();
+    }
+
+    public void HandleMovementInput()
+    {
+        int forwardValue = myDevice.GetControlValueByID(3);
+        int backwardValue = myDevice.GetControlValueByID(4);
+        int leftValue = myDevice.GetControlValueByID(5);
+        int rightValue = myDevice.GetControlValueByID(6);
+        int jumpValue = myDevice.GetControlValueByID(7);
+        MainCharacter.GetComponent<FirstPersonController>().HeepWalkControl(forwardValue, backwardValue, leftValue, rightValue, jumpValue);
     }
 
     public void ChestTriggered()

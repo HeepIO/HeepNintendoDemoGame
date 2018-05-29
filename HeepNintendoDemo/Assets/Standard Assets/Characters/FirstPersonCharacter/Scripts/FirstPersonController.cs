@@ -66,6 +66,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+
+                if(jump == 1)
+                {
+                    m_Jump = true;
+                }
             }
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
@@ -200,12 +205,30 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Camera.transform.localPosition = newCameraPosition;
         }
 
+        private int forward;
+        private int backward;
+        private int left;
+        private int right;
+        private int jump;
+        public void HeepWalkControl(int _forward, int _backward, int _left, int _right, int _jump)
+        {
+            forward = _forward;
+            backward = _backward;
+            left = _left;
+            right = _right;
+            jump = _jump;
+        }
 
         private void GetInput(out float speed)
         {
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+
+            if (forward == 1)
+                vertical = 1;
+            else if (backward == 1)
+                vertical = -1;
 
             bool waswalking = m_IsWalking;
 
