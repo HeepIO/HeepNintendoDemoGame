@@ -13,6 +13,7 @@ public class IslandHeep : MonoBehaviour {
     public GameObject nightLight;
 
     public GameObject waterFallRock;
+    public GameObject waterFallRockExplosion;
 
     private void OnApplicationQuit()
     {
@@ -60,6 +61,7 @@ public class IslandHeep : MonoBehaviour {
         if(myDevice.GetControlValueByID(1) == 1)
         {
             waterFallRock.SetActive(false);
+            waterFallRockExplosion.SetActive(true);
         }
     }
 
